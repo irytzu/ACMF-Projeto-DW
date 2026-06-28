@@ -2,6 +2,7 @@ const express = require('express');
 const pool = require('./db');
 
 const app = express();
+app.use(express.static('public'));
 app.use(express.json());
 
 const PORT = 3000;
@@ -10,7 +11,6 @@ app.get('/', (req, res) => {
   res.send('API funcionando!');
 });
 
-// Rota de teste do banco
 app.get('/teste-bd', async (req, res) => {
   try {
     const resultado = await pool.query('SELECT NOW()');
@@ -21,7 +21,6 @@ app.get('/teste-bd', async (req, res) => {
   }
 });
 
-// Listar todos os jogadores
 app.get('/jogadores', async (req, res) => {
   try {
     const resultado = await pool.query('SELECT * FROM jogadores');
@@ -32,7 +31,7 @@ app.get('/jogadores', async (req, res) => {
   }
 });
 
-// Listar todos os jogos
+
 app.get('/jogos', async (req, res) => {
   try {
     const resultado = await pool.query('SELECT * FROM jogos');
@@ -43,7 +42,7 @@ app.get('/jogos', async (req, res) => {
   }
 });
 
-// Listar todas as estatisticas
+
 app.get('/estatisticas', async (req, res) => {
   try {
     const resultado = await pool.query('SELECT * FROM estatisticas');

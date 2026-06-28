@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <title>ACMF - Sistema de Futebol</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <header>
+    <h1>ACMF - Sistema de Futebol</h1>
+    <nav>
+      <button onclick="mostrarSecao('jogadores')">Jogadores</button>
+      <button onclick="mostrarSecao('jogos')">Jogos</button>
+      <button onclick="mostrarSecao('estatisticas')">Estatísticas</button>
+    </nav>
+  </header>
+
+  <main>
+    <section id="jogadores" class="secao">
+      <h2>Jogadores</h2>
+      <div id="lista-jogadores" class="lista"></div>
+    </section>
+
+    <section id="jogos" class="secao" style="display: none;">
+      <h2>Jogos</h2>
+      <div id="lista-jogos" class="lista"></div>
+    </section>
+
+    <section id="estatisticas" class="secao" style="display: none;">
+      <h2>Estatísticas</h2>
+      <div id="lista-estatisticas" class="lista"></div>
+    </section>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
