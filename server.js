@@ -13,7 +13,7 @@ app.get('/', (req, res) => {
 
 app.get('/jogadores', async (req, res) => {
   try {
-    const resultado = await pool.query('SELECT * FROM jogadores ORDER BY nome');
+    const resultado = await pool.query("SELECT * FROM jogadores WHERE selecao = 'Brasil' ORDER BY nome");
     res.json(resultado.rows);
   } catch (erro) {
     console.error(erro);
