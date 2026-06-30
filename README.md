@@ -37,7 +37,7 @@ npm install
 
 Esse comando instala automaticamente o Express, o pg e o Nodemon, que já estão listados no package.json.
 
-O próximo passo é criar o banco de dados. Abra o pgAdmin (ou outra ferramenta de sua preferência), crie um novo banco chamado wc_convocacoes, abra o Query Tool desse banco e execute o conteúdo do arquivo ddl.sql, que está na raiz do projeto. Esse script cria as três tabelas (jogadores, jogos e eventos) e já insere todos os dados necessários para o funcionamento do site.
+O próximo passo é criar o banco de dados. Abra o pgAdmin (ou outra ferramenta de sua preferência), crie um novo banco chamado EduardoBarzottoIritsu_2bim_BrasilNaCopa2022, abra o Query Tool desse banco e execute o conteúdo do arquivo ddl.sql, que está na raiz do projeto. Esse script cria as três tabelas (jogadores, jogos e eventos) e já insere todos os dados necessários para o funcionamento do site.
 
 Depois de criar o banco, abra o arquivo src/db.js e confirme se os dados de conexão batem com o seu ambiente local, como usuário, senha, porta e nome do banco.
 
