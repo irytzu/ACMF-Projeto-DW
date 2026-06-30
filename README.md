@@ -28,22 +28,22 @@ Antes de começar, é preciso ter instalado o Node.js (versão 18 ou superior) e
 
 O primeiro passo é clonar o repositório e entrar na pasta do projeto:
 
-git clone https://github.com/irytzu/EduardoBarzottoIritsu_2bim_BrasilNaCopa2022.git
-cd EduardoBarzottoIritsu_2bim_BrasilNaCopa2022
+**git clone https://github.com/irytzu/EduardoBarzottoIritsu_2bim_BrasilNaCopa2022.git
+cd EduardoBarzottoIritsu_2bim_BrasilNaCopa2022**
 
 Depois, instale as dependências do projeto:
 
-npm install
+**npm install**
 
 Esse comando instala automaticamente o Express, o pg e o Nodemon, que já estão listados no package.json.
 
-O próximo passo é criar o banco de dados. Abra o pgAdmin (ou outra ferramenta de sua preferência), crie um novo banco chamado EduardoBarzottoIritsu_2bim_BrasilNaCopa2022, abra o Query Tool desse banco e execute o conteúdo do arquivo ddl.sql, que está na raiz do projeto. Esse script cria as três tabelas (jogadores, jogos e eventos) e já insere todos os dados necessários para o funcionamento do site.
+O próximo passo é criar o banco de dados. Abra o pgAdmin (ou outra ferramenta de sua preferência), crie um novo banco chamado **wc_convocacoes**, abra o Query Tool desse banco e execute o conteúdo do arquivo ddl.sql, que está na raiz do projeto. Esse script cria as três tabelas (jogadores, jogos e eventos) e já insere todos os dados necessários para o funcionamento do site.
 
 Depois de criar o banco, abra o arquivo src/db.js e confirme se os dados de conexão batem com o seu ambiente local, como usuário, senha, porta e nome do banco.
 
 Com tudo configurado, é só rodar o servidor:
 
-node src/server.js
+**node src/server.js**
 
 Se tudo estiver certo, deve aparecer no terminal a mensagem "Servidor rodando em http://localhost:3000". Basta abrir essa mesma URL no navegador para visualizar o site funcionando, com os jogadores, os jogos e os eventos da campanha do Brasil na Copa de 2022.
 
